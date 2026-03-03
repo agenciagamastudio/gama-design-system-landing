@@ -1,17 +1,11 @@
 {
-  "name": "gama-studio-design-system",
   "version": 2,
   "public": true,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "buildCommand": "echo 'Static site - no build needed'",
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "index.html"
+      "src": "/(?!.*\\.)",
+      "dest": "/index.html"
     }
   ]
 }

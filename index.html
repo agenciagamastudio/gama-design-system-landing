@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Studio Design System - Design Tokens para Interfaces Modernas</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <span class="material-symbols-outlined">palette</span>
+                <span>Gama Studio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#docs">DOCS</a></li>
+                <li><a href="#components">COMPONENTES</a></li>
+                <li><a href="#github">GITHUB</a></li>
+            </ul>
+            <button class="btn-primary">COMEÇAR</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Gama Studio<br>Design System</h1>
+            <p class="hero-subtitle">Design tokens para interfaces modernas e escaláveis</p>
+            <div class="hero-cta">
+                <button class="btn-primary">📥 Download</button>
+                <button class="btn-secondary">📖 Documentação</button>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title">Por Que Um Design System?</h2>
+
+            <div class="problem-grid">
+                <div class="problem-card without">
+                    <h3>❌ Sem Design System</h3>
+                    <ul>
+                        <li>Cores inconsistentes</li>
+                        <li>Tipografia aleatória</li>
+                        <li>Espaçamento variável</li>
+                        <li>Componentes duplicados</li>
+                        <li>Tempo perdido</li>
+                    </ul>
+                </div>
+
+                <div class="problem-card with">
+                    <h3>✅ Com Design System</h3>
+                    <ul>
+                        <li>Paleta unificada</li>
+                        <li>Escala tipográfica</li>
+                        <li>Espaçamento consistente</li>
+                        <li>Componentes prontos</li>
+                        <li>Tempo economizado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES -->
+    <section id="pillars" class="pillars">
+        <div class="container">
+            <h2 class="section-title">Os 4 Pilares do Sistema</h2>
+
+            <div class="pillars-grid">
+                <!-- CORES -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎨</div>
+                    <h3>Cores</h3>
+                    <div class="color-swatches">
+                        <div class="swatch" style="background: #88CE11;" title="#88CE11 - Primary"></div>
+                        <div class="swatch" style="background: #161616;" title="#161616 - Background"></div>
+                        <div class="swatch" style="background: #272727;" title="#272727 - Surface"></div>
+                        <div class="swatch" style="background: #A1A1AA;" title="#A1A1AA - Text Secondary"></div>
+                    </div>
+                    <p>Paleta de cores vibrante com verde neon (#88CE11) como primary</p>
+                </div>
+
+                <!-- TIPOGRAFIA -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">✍️</div>
+                    <h3>Tipografia</h3>
+                    <div class="typography-samples">
+                        <div style="font-family: 'Poppins'; font-size: 24px; font-weight: 900;">Poppins Bold</div>
+                        <div style="font-family: 'JetBrains Mono'; font-size: 14px;">JetBrains Mono</div>
+                    </div>
+                    <p>Fontes modernas: Poppins (design) + JetBrains Mono (código)</p>
+                </div>
+
+                <!-- ESPAÇAMENTO -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">📏</div>
+                    <h3>Espaçamento</h3>
+                    <div class="spacing-grid">
+                        <div class="spacing-item" title="4px">4px</div>
+                        <div class="spacing-item" title="8px">8px</div>
+                        <div class="spacing-item" title="16px">16px</div>
+                        <div class="spacing-item" title="32px">32px</div>
+                    </div>
+                    <p>Sistema 4px: consistente e escalável em todo o design</p>
+                </div>
+
+                <!-- COMPONENTES -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🧩</div>
+                    <h3>Componentes</h3>
+                    <div class="components-preview">
+                        <button class="btn-preview btn-primary-small">Botão</button>
+                        <div class="card-preview"></div>
+                    </div>
+                    <p>Componentes prontos: botões, cards, inputs, badges e mais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section id="components" class="showcase">
+        <div class="container">
+            <h2 class="section-title">Showcase Interativo</h2>
+
+            <div class="showcase-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="buttons">Botões</button>
+                    <button class="tab-btn" data-tab="cards">Cards</button>
+                    <button class="tab-btn" data-tab="inputs">Inputs</button>
+                    <button class="tab-btn" data-tab="badges">Badges</button>
+                </div>
+
+                <!-- TAB: BUTTONS -->
+                <div class="tab-content active" id="tab-buttons">
+                    <div class="showcase-code">
+                        <pre><code>&lt;button class="btn-primary"&gt;
+  Botão Primário
+&lt;/button&gt;</code></pre>
+                    </div>
+                    <div class="showcase-preview">
+                        <button class="btn-primary">Botão Primário</button>
+                        <button class="btn-secondary">Botão Secundário</button>
+                        <button class="btn-ghost">Botão Ghost</button>
+                    </div>
+                </div>
+
+                <!-- TAB: CARDS -->
+                <div class="tab-content" id="tab-cards">
+                    <div class="showcase-code">
+                        <pre><code>&lt;div class="card"&gt;
+  &lt;h3&gt;Título do Card&lt;/h3&gt;
+  &lt;p&gt;Conteúdo&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="showcase-preview">
+                        <div class="card">
+                            <h3>Card Básico</h3>
+                            <p>Design system com componentes prontos para usar</p>
+                        </div>
+                        <div class="card card-glass">
+                            <h3>Card Glassmorphism</h3>
+                            <p>Efeito de vidro com transparência</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: INPUTS -->
+                <div class="tab-content" id="tab-inputs">
+                    <div class="showcase-code">
+                        <pre><code>&lt;input type="text"
+  placeholder="Digite..."
+  class="input"&gt;</code></pre>
+                    </div>
+                    <div class="showcase-preview">
+                        <input type="text" class="input" placeholder="Input padrão">
+                        <div class="input-group">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type="text" class="input" placeholder="Input com ícone">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: BADGES -->
+                <div class="tab-content" id="tab-badges">
+                    <div class="showcase-code">
+                        <pre><code>&lt;span class="badge"&gt;
+  STABLE
+&lt;/span&gt;</code></pre>
+                    </div>
+                    <div class="showcase-preview">
+                        <span class="badge">STABLE</span>
+                        <span class="badge badge-beta">BETA</span>
+                        <span class="badge badge-new">NEW</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Features Principais</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Design Tokens</h3>
+                    <p>Sistema de tokens W3C DTCG com 3 camadas: primitivas, semânticas e de componente</p>
+                    <ul>
+                        <li>Cores variáveis</li>
+                        <li>Tipografia escalável</li>
+                        <li>Espaçamento consistente</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Performance</h3>
+                    <p>Otimizado para produção com Tailwind CSS e tree-shaking automático</p>
+                    <ul>
+                        <li>22kb gzipped</li>
+                        <li>Fast runtime</li>
+                        <li>Zero dependências</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsivo</h3>
+                    <p>Mobile-first com breakpoints definidos para todas as resoluções</p>
+                    <ul>
+                        <li>6 breakpoints</li>
+                        <li>Grid 12 colunas</li>
+                        <li>Layouts fluidos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="cta" class="cta-final">
+        <div class="container">
+            <h2>Pronto para usar Gama Design System?</h2>
+            <p>Comece agora com nossa documentação completa e componentes prontos</p>
+
+            <div class="cta-buttons">
+                <button class="btn-primary btn-large">📥 Download v1.0.4</button>
+                <button class="btn-secondary btn-large">📖 Ler Documentação</button>
+                <button class="btn-ghost btn-large">⭐ GitHub</button>
+            </div>
+
+            <div class="install-box">
+                <code>npm install gama-design-system</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Gama Studio | Design System v1.0.4</p>
+            <div class="footer-links">
+                <a href="#docs">Docs</a>
+                <a href="#github">GitHub</a>
+                <a href="#privacy">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

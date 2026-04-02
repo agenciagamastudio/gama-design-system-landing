@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "GAMA NFS-e AutoFill",
+  "version": "1.0.0",
+  "description": "Preenche automaticamente os campos do portal NFS-e com os dados do cliente selecionado.",
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://www.nfse.gov.br/*"
+  ],
+
+  "externally_connectable": {
+    "matches": [
+      "https://gama-nfse.vercel.app/*",
+      "http://localhost:3000/*"
+    ]
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nfse.gov.br/EmissorNacional/DPS/Pessoas*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "GAMA NFS-e AutoFill"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "portal_url": "https://www.nfse.gov.br/EmissorNacional/DPS/Pessoas",
+  "fields": [
+    {
+      "field_name": "competencia",
+      "label": "Competência",
+      "type": "select",
+      "format": "MM/YYYY",
+      "selectors": {
+        "primary": "[name='competencia']",
+        "fallback_by_id": "#competencia",
+        "fallback_by_label": "label:contains('Competência')"
+      },
+      "notes": "Dropdown mensal",
+      "verified": false
+    },
+    {
+      "field_name": "cnpj_tomador",
+      "label": "CNPJ do Tomador",
+      "type": "input",
+      "format": "XX.XXX.XXX/XXXX-XX",
+      "selectors": {
+        "primary": "[name='cnpj_tomador']",
+        "fallback_by_id": "#cnpj_tomador",
+        "fallback_by_label": "label:contains('CNPJ')"
+      },
+      "notes": "Validação obrigatória",
+      "verified": false
+    },
+    {
+      "field_name": "nome_tomador",
+      "label": "Nome do Tomador",
+      "type": "input",
+      "format": "texto",
+      "selectors": {
+        "primary": "[name='nome_tomador']",
+        "fallback_by_id": "#nome_tomador",
+        "fallback_by_label": "label:contains('Nome')"
+      },
+      "notes": "Razão social",
+      "verified": false
+    },
+    {
+      "field_name": "endereco_tomador",
+      "label": "Endereço do Tomador",
+      "type": "input",
+      "format": "texto",
+      "selectors": {
+        "primary": "[name='endereco_tomador']",
+        "fallback_by_id": "#endereco_tomador",
+        "fallback_by_label": "label:contains('Endereço')"
+      },
+      "notes": "Endereço completo",
+      "verified": false
+    },
+    {
+      "field_name": "municipio_tomador",
+      "label": "Município do Tomador",
+      "type": "input",
+      "format": "texto",
+      "selectors": {
+        "primary": "[name='municipio_tomador']",
+        "fallback_by_id": "#municipio_tomador",
+        "fallback_by_label": "label:contains('Município')"
+      },
+      "notes": "Cidade",
+      "verified": false
+    },
+    {
+      "field_name": "estado_tomador",
+      "label": "Estado do Tomador",
+      "type": "input",
+      "format": "XX",
+      "selectors": {
+        "primary": "[name='estado_tomador']",
+        "fallback_by_id": "#estado_tomador",
+        "fallback_by_label": "label:contains('Estado')"
+      },
+      "notes": "UF (2 letras)",
+      "verified": false
+    },
+    {
+      "field_name": "cep_tomador",
+      "label": "CEP do Tomador",
+      "type": "input",
+      "format": "XXXXX-XXX",
+      "selectors": {
+        "primary": "[name='cep_tomador']",
+        "fallback_by_id": "#cep_tomador",
+        "fallback_by_label": "label:contains('CEP')"
+      },
+      "notes": "Validação de formato",
+      "verified": false
+    },
+    {
+      "field_name": "local_prestacao",
+      "label": "Local de Prestação",
+      "type": "input",
+      "format": "texto",
+      "selectors": {
+        "primary": "[name='local_prestacao']",
+        "fallback_by_id": "#local_prestacao",
+        "fallback_by_label": "label:contains('Local')"
+      },
+      "notes": "Local onde serviço foi prestado",
+      "verified": false
+    },
+    {
+      "field_name": "valor_servico",
+      "label": "Valor do Serviço",
+      "type": "input",
+      "format": "R$ X.XXX,XX (numérico para transmissão)",
+      "selectors": {
+        "primary": "[name='valor_servico']",
+        "fallback_by_id": "#valor_servico",
+        "fallback_by_label": "label:contains('Valor')"
+      },
+      "notes": "Valor em reais",
+      "verified": false
+    }
+  ],
+  "notes": {
+    "verification_task": "Story 3.1 deve verificar cada seletor manualmente contra portal",
+    "fallback_strategy": "Se primary não encontra, tenta fallback_by_id depois fallback_by_label",
+    "event_simulation": "Content.js usa dispatchEvent para input, change, blur",
+    "last_verified": null,
+    "portal_structure_notes": "A estrutura do portal pode mudar; re-verificar a cada 3 meses"
+  }
+}

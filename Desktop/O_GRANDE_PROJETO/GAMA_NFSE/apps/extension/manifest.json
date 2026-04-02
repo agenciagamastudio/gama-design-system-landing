@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "GAMA NFS-e AutoFill",
+  "version": "1.0.0",
+  "description": "Preenche automaticamente o portal NFS-e com dados da Vercel App",
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://www.nfse.gov.br/*"
+  ],
+
+  "externally_connectable": {
+    "matches": [
+      "https://gama-nfse.vercel.app/*"
+    ]
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.nfse.gov.br/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  }
+}
